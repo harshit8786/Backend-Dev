@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anujvashishth/Backend-Dev.git"
+   
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/anujvashishth/Backend-Dev/issues"
+   
   },
-  "homepage": "https://github.com/anujvashishth/Backend-Dev#readme",
+
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
