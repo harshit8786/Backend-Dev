@@ -4,9 +4,6 @@ import isAuthenticated from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-/* =========================
-   GET Dashboard Employees
-========================= */
 
 router.get("/dashboard", isAuthenticated, (req, res) => {
 
@@ -19,19 +16,9 @@ router.get("/dashboard", isAuthenticated, (req, res) => {
   res.render("employees", { employees });
 });
 
-
-/* =========================
-   SHOW Add Employee Form
-========================= */
-
 router.get("/employees/add", isAuthenticated, (req, res) => {
   res.render("addEmployee");
 });
-
-
-/* =========================
-   SAVE Employee
-========================= */
 
 router.post("/employees/add", isAuthenticated, (req, res) => {
 
@@ -58,11 +45,6 @@ router.post("/employees/add", isAuthenticated, (req, res) => {
   res.redirect("/dashboard");
 });
 
-
-/* =========================
-   DELETE Employee
-========================= */
-
 router.get("/employees/delete/:id", isAuthenticated, (req, res) => {
 
   const id = parseInt(req.params.id);
@@ -81,11 +63,6 @@ router.get("/employees/delete/:id", isAuthenticated, (req, res) => {
 });
 
 export default router;
-
-/* =========================
-   SHOW Edit Page
-========================= */
-
 router.get("/employees/edit/:id", isAuthenticated, (req, res) => {
 
   const id = parseInt(req.params.id);
@@ -97,10 +74,6 @@ router.get("/employees/edit/:id", isAuthenticated, (req, res) => {
   res.render("editEmployee", { employee });
 });
 
-
-/* =========================
-   UPDATE Employee
-========================= */
 
 router.post("/employees/edit/:id", isAuthenticated, (req, res) => {
 
