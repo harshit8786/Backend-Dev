@@ -1,6 +1,4 @@
 import fs from "fs";
-
-// Get Employee List
 export function getEmployees(req, res) {
   let employees = [];
 
@@ -15,14 +13,12 @@ export function getEmployees(req, res) {
   });
 }
 
-// Show Add Form Page
 export function showAddForm(req, res) {
   res.render("addEmployee", {
     user: req.session.user
   });
 }
 
-// Add Employee
 export function addEmployee(req, res) {
   const { name, gender, department, salary, startDate, notes, profileImage } = req.body;
 
