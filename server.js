@@ -7,22 +7,12 @@ import employeeRoutes from "./routes/employeeRoutes.js";
 import isAuthenticated from "./middleware/authMiddleware.js";
 
 const app = express();
-
-/* =========================
-   Middlewares
-========================= */
-
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json()); // optional but good
+app.use(express.json()); 
 
 app.set("view engine", "ejs");
 
-/* ✅ STATIC FILES (IMPORTANT) */
 app.use(express.static("public"));
-
-/* =========================
-   Session Setup
-========================= */
 
 app.use(session({
   secret: "secret-key",
@@ -30,14 +20,9 @@ app.use(session({
   saveUninitialized: false
 }));
 
-/* =========================
-   Routes
-========================= */
-
 app.use("/", userRoutes);
 app.use("/", employeeRoutes);
 
-/* Dashboard shows employees */
 app.get("/dashboard", isAuthenticated, (req, res) => {
 
   let employees = [];
@@ -50,14 +35,9 @@ app.get("/dashboard", isAuthenticated, (req, res) => {
   res.render("employees", { employees });
 });
 
-/* Default route */
 app.get("/", (req, res) => {
   res.redirect("/login");
 });
-
-/* =========================
-   Server Start
-========================= */
 
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
