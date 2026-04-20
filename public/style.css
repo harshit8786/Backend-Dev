@@ -4,7 +4,6 @@ body {
   background-color: #f4f6f9;
 }
 
-/* ===== Navbar ===== */
 .navbar {
   background: #ffffff;
   padding: 15px 40px;
@@ -33,13 +32,11 @@ body {
   border-radius: 4px;
 }
 
-/* ===== Container ===== */
 .container {
   width: 90%;
   margin: 40px auto;
 }
 
-/* ===== Table ===== */
 .emp-table {
   width: 100%;
   border-collapse: collapse;
@@ -63,7 +60,6 @@ body {
   background: #f1f1f1;
 }
 
-/* ===== Name + Avatar ===== */
 .name-cell {
   display: flex;
   align-items: center;
@@ -92,7 +88,6 @@ body {
   color: gray;
 }
 
-/* ===== Action Icons ===== */
 .action-icons a {
   margin-right: 12px;
   text-decoration: none;
