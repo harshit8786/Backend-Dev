@@ -1,6 +1,6 @@
 // import registerUser from "./src/registerUser.js";
-// registerUser("Anuj", "vashishthaanuj07@gmail.com", "8421")
+// registerUser("Harshit", "harshitsingh@gmail.com", "8421")
 // import loginUser from "./src/loginUser.js";
-// loginUser("TAnuj", "vashishthaanuj07@gmail.com")
+// loginUser("Harshit", "harshitsingh@gmail.com")
 import createTodo from "./src/createTodo.js";
-createTodo("Tanuj", "completed" )
+createTodo("Harshit", "completed" )
